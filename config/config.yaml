@@ -1,0 +1,20 @@
+# =========================
+# 全局运行配置
+# =========================
+
+agent:
+  max_iter: 3
+  timeout: 5            # 单次代码执行超时（秒）
+  verbose: true
+
+paths:
+  cache_dir: "./cache"
+  log_dir: "./logs"
+  output_dir: "./outputs"
+
+execution:
+  python_version: "python"
+  capture_stdout: true
+
+evaluation:
+  stop_on_success: true

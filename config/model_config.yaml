@@ -1,0 +1,23 @@
+# =========================
+# 模型配置
+# =========================
+
+default_model: qwen
+
+models:
+  qwen:
+    provider: dashscope
+    model_name: qwen-coder-plus
+    temperature: 0.2
+    max_tokens: 1024
+
+  deepseek:
+    provider: deepseek
+    model_name: deepseek-coder
+    temperature: 0.2
+    max_tokens: 1024
+
+  local:
+    provider: local
+    model_name: codellama
+    temperature: 0.1

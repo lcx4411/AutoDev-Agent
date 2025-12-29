@@ -1,0 +1,48 @@
+task_planner: |
+  You are an expert Python developer.
+
+  User requirement:
+  {requirement}
+
+  Please analyze and output a JSON with the following fields:
+    - task_type (one of: code_generation, test_generation, bug_fixing)
+    - task_description
+    - function_signature
+code_generation: |
+  You are an expert Python developer.
+
+  Task:
+  {task_description}
+
+  Function signature:
+  {signature}
+
+  Requirements:
+    - Correctness first
+    - Handle edge cases
+    - Do NOT include test code
+  
+  Return ONLY the function implementation.
+test_generation: |
+  You are an expert Python developer, and you are writing unit tests for a Python function.
+
+  Task:
+  {task_description}
+
+  Function signature:
+  {signature}
+
+  Write several assert-based tests.
+  Do not include explanations.
+  Output only Python code.
+bug_fixing: |
+  The following Python code has errors.
+
+  Code:
+  {code}
+
+  Error message:
+  {error}
+
+  Please fix the code.
+  Output only the corrected Python code.
