@@ -18,12 +18,16 @@ code-assistant-agent/
 │   ├── core/                  # 核心逻辑
 │   │   ├── __init__.py
 │   │   ├── agent.py          # 主Agent类
-│   │   ├── reflection.py     # 反思引擎
+│   │   ├── plan_schema.py    # 任务结构定义（可拓展）
 │   │   ├── planner.py        # 任务规划器
 │   │   ├── code_generator.py # 代码生成器
 │   │   ├── tester.py         # 测试生成器
-│   │   └── fixer.py          # Bug修复器
-│   │
+│   │   ├── fixer.py          # Bug修复器
+│   │   └── reflection.py     # 反思引擎
+│   ├── core/                  # 核心逻辑
+│   │   ├── __init__.py
+│   │   └── humaneval_eval.py    # huaneval评估模块
+│   │ 
 │   ├── models/                # 模型相关
 │   │   ├── __init__.py
 │   │   ├── base_model.py     # 模型基类

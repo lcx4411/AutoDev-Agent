@@ -8,4 +8,4 @@ class BaseModel(ABC):
 
     @abstractmethod
     def generate(self, prompt: str) -> str:
-        pass
+        raise NotImplementedError

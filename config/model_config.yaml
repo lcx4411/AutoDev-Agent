@@ -9,13 +9,15 @@ models:
     provider: dashscope
     model_name: qwen-coder-plus
     temperature: 0.2
-    max_tokens: 1024
+    max_tokens: 512
 
   deepseek:
     provider: deepseek
-    model_name: deepseek-coder
+    model_name: deepseek-chat
     temperature: 0.2
-    max_tokens: 1024
+    max_tokens: 512
+    api_key: your_api_key
+    base_url: https://api.deepseek.com
 
   local:
     provider: local

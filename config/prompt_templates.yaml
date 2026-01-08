@@ -15,7 +15,7 @@ code_generation: |
   {task_description}
 
   Function signature:
-  {signature}
+  {function_signature}
 
   Requirements:
     - Correctness first
@@ -30,14 +30,16 @@ test_generation: |
   {task_description}
 
   Function signature:
-  {signature}
+  {function_signature}
 
   Write several assert-based tests.
   Do not include explanations.
   Output only Python code.
 bug_fixing: |
   The following Python code has errors.
-
+  Function signature:
+  {function_signature}
+  
   Code:
   {code}
 
