@@ -15,18 +15,26 @@ code-assistant-agent/
 │   ├── __init__.py
 │   ├── main.py                # 主入口文件
 │   │
+│   ├── cli/                # CLI接口
+│   │   ├── __init__.py
+│   │   ├── main.py     # CLI主程序
+│   │
 │   ├── core/                  # 核心逻辑
 │   │   ├── __init__.py
 │   │   ├── agent.py          # 主Agent类
+│   │   ├── bugfix_agent.py   # 针对缺陷修复的Agent类
 │   │   ├── plan_schema.py    # 任务结构定义（可拓展）
 │   │   ├── planner.py        # 任务规划器
 │   │   ├── code_generator.py # 代码生成器
 │   │   ├── tester.py         # 测试生成器
 │   │   ├── fixer.py          # Bug修复器
 │   │   └── reflection.py     # 反思引擎
-│   ├── core/                  # 核心逻辑
+│   │ 
+│   ├── evaluation/           # 评估模块
 │   │   ├── __init__.py
-│   │   └── humaneval_eval.py    # huaneval评估模块
+│   │   ├── humaneval_eval.py     # humaneval代码生成评估
+│   │   ├── mbpp_testgen_eval.py  # mbpp测试生成评估
+│   │   └── swebench_fix_eval.py  # swebench代码修评估
 │   │ 
 │   ├── models/                # 模型相关
 │   │   ├── __init__.py

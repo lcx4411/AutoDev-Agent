@@ -23,12 +23,12 @@ def extract_json_code(text: str) -> str:
     return text.strip()
 
 def call_llm_python(prompt: str) -> str:
-    model = DeepSeekModel()
+    model = QwenModel()
     raw = model.generate(prompt)
     return extract_python_code(raw)
 
 def call_llm_json(prompt: str) -> dict:
-    model = DeepSeekModel()
+    model = QwenModel()
     raw = model.generate(prompt)
     json_str = extract_json_code(raw)
 
